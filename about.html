@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CampusBookSwap</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Campus<span>Book</span>Swap</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Browse Books</a></li>
+                    <li><a href="#" id="postBookLink">Post a Book</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary" id="loginBtn" onclick="location.href='login.html'">Login</button>
+                <button class="btn btn-primary" id="signupBtn" onclick="location.href='signup.html'">Sign Up</button>
+                <button class="btn btn-secondary" id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="hero-content">
+                <h1>About CampusBookSwap</h1>
+                <p class="hero-subtitle">Revolutionizing textbook exchange for students, by students</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">1200+</div>
+                        <div class="stat-label">Books Exchanged</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">₹5L+</div>
+                        <div class="stat-label">Student Savings</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Campuses</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>. At CampusBookSwap, our mission is to make education affordable and sustainable for every student. We believe no learner should be held back by the high cost of textbooks. By enabling students to exchange, buy, and sell books directly with each other, we reduce financial burden, encourage reuse, and promote a culture of sharing across campuses.</p>
+                    <div class="mission-features">
+                        <div class="feature">
+                            <span class="feature-icon">💰</span>
+                            <h3>Save Money</h3>
+                            <p>Get textbooks for 60-80% less than new prices</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🌱</span>
+                            <h3>Eco-Friendly</h3>
+                            <p>Reduce paper waste and promote sustainability</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🤝</span>
+                            <h3>Build Community</h3>
+                            <p>Connect with fellow students on campus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-image">
+                    <div class="image-placeholder">
+                        <span>📚✨</span>
+                        <p>Student Community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Account</h3>
+                        <p>Sign up with your campus email and verify your account</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Browse or Post</h3>
+                        <p>Find textbooks you need or list books you want to exchange</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Connect & Exchange</h3>
+                        <p>Message other students and arrange book exchanges</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Rate & Review</h3>
+                        <p>Share your experience and help build trust in our community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Our Story</h2>
+            <div class="team-content">
+                <div class="story-text">
+                    <p>CampusBookSwap was founded in 2025 when a group of students realized that expensive textbooks often went unused after just one semester. What began as a small exchange initiative on campus soon evolved into a student-led platform dedicated to affordability and sustainability. Today, CampusBookSwap empowers thousands of students to save money, reduce waste, and support one another through community-driven book sharing..</p>
+                    <p>Founded in 2025 by university students, CampusBookSwap emerged to reduce the heavy cost of academic books, with many students spending over ₹10,000 each semester on resources they rarely used again. Today, the platform enables peer-to-peer textbook exchange, making education more affordable, accessible, and sustainable across campuses..</p>
+                    <p>CampusBookSwap started when students noticed shelves filled with unused books while others struggled to afford them. From a small campus idea, it has grown into a platform that helps students save money, share knowledge, and access the books they need through simple, student-to-student exchanges..</p>
+                </div>
+                <div class="team-values">
+                    <div class="value-card">
+                        <h3>📚 Accessibility</h3>
+                        <p>Making education affordable for every student</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🌍 Sustainability</h3>
+                        <p>Reducing environmental impact through reuse</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🤝 Community</h3>
+                        <p>Building connections between students</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions or suggestions? We'd love to hear from you! Reach out to our team and we'll get back to you within 24 hours.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>support@campusbookswap.in</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+91 7786543210</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">🏢</span>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>Sit,Lavale</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">🕒</span>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Mon - Fri: 9AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send us a Message</h3>
+                        
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" checked>
+                                <span class="checkmark"></span>
+                                Send me updates about new features and campus events
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is CampusBookSwap free to use?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! CampusBookSwap is completely free for students. There are no hidden fees or commissions on book exchanges.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I ensure book quality?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have a detailed condition rating system and user reviews. Always check the book condition and seller ratings before exchanging.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I rent books instead of buying?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Many students offer books for rent. Look for the "For Rent" tag when browsing books.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I have issues with a transaction?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contact our support team immediately. We'll help resolve any disputes and maintain the integrity of our platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+         
+            <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>CampusBookSwap</h3>
+                <p>Making textbooks affordable for students through peer-to-peer exchange.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Browse Books</a></li>
+                    <li><a href="#" id="footerPostLink">Post a Book</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: support@campusbookswap.in</li>
+                    <li>Phone: 7786543210</li>
+                    <li>Campus Location: Sit,Lavale</li>
+                </ul>
+            </div>
+        </div>
+       <div class="container copyright">
+            <p>&copy; 2025 CampusBookSwap. All rights reserved. | Made with ❤️ for Students</p>
+        </div>
+    </footer>
+     
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('contactName').value,
+                email: document.getElementById('contactEmail').value,
+                subject: document.getElementById('contactSubject').value,
+                message: document.getElementById('contactMessage').value,
+                newsletter: document.querySelector('input[name="newsletter"]').checked
+            };
+            
+            // Simulate form submission
+            console.log('Contact form submitted:', formData);
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                
+                // Toggle current answer
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                toggle.textContent = answer.style.display === 'block' ? '−' : '+';
+                
+                // Close other answers
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) {
+                        otherAnswer.style.display = 'none';
+                        otherAnswer.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+                    }
+                });
+            });
+        });
+
+        // Close all FAQ answers by default
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+
+        document.getElementById('postBookLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            checkAuthAndRedirect('post-book.html');
+        });
+
+        document.getElementById('footerPostLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            checkAuthAndRedirect('post-book.html');
+        });
+
+        updateAuthUI();
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Book - CampusBookSwap</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Campus<span>Book</span>Swap</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Browse Books</a></li>
+                    <li><a href="post-book.html">Post a Book</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+          <div class="auth-buttons">
+    <button class="btn btn-secondary" id="loginBtn" onclick="location.href='login.html'">Login</button>
+    <button class="btn btn-primary" id="signupBtn" onclick="location.href='signup.html'">Sign Up</button>
+    <button class="btn btn-secondary" id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Post a Book for Exchange</h2>
+        </div>
+
+        <div class="post-form">
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title</label>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" id="bookAuthor" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookCourse">Course Code</label>
+                        <input type="text" id="bookCourse" placeholder="e.g., CS101">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookEdition">Edition</label>
+                        <input type="number" id="bookEdition" min="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookPrice">Price ($)</label>
+                    <input type="number" id="bookPrice" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label>Exchange Type</label>
+                    <div class="condition-options" data-type="exchange">
+                        <div class="condition-option selected" data-value="sell">Sell</div>
+                        <div class="condition-option" data-value="exchange">Exchange</div>
+                        <div class="condition-option" data-value="rent">Rent</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Book Condition</label>
+                    <div class="condition-options">
+                        <div class="condition-option selected" data-value="excellent">Excellent</div>
+                        <div class="condition-option" data-value="good">Good</div>
+                        <div class="condition-option" data-value="fair">Fair</div>
+                        <div class="condition-option" data-value="poor">Poor</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookDescription">Description</label>
+                    <textarea id="bookDescription" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Post Book</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>CampusBookSwap</h3>
+                <p>Making textbooks affordable for students through peer-to-peer exchange.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Browse Books</a></li>
+                    <li><a href="post-book.html">Post a Book</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: support@campusbookswap.in</li>
+                    <li>Phone: 7786543210</li>
+                    <li>Campus Location: Sit,Lavale</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 CampusBookSwap. All rights reserved. | Made with ❤️ for Students</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/books.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('bookForm').addEventListener('submit', handleBookPost);
+        
+        // Setup condition options
+        setupConditionOptions();
+
+        // Check if user is logged in, redirect if not
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!isLoggedIn()) {
+                alert('Please login to post a book.');
+                window.location.href = 'login.html';
+            }
+            updateAuthUI();
+        });
+    </script>
+</body>
+</html>

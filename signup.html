@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CampusBookSwap</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Campus<span>Book</span>Swap</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Browse Books</a></li>
+                    <li><a href="#" id="postBookLink">Post a Book</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+          <div class="auth-buttons">
+    <button class="btn btn-secondary" id="loginBtn" onclick="location.href='login.html'">Login</button>
+    <button class="btn btn-primary" id="signupBtn" onclick="location.href='signup.html'">Sign Up</button>
+    <button class="btn btn-secondary" id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="auth-container">
+            <h2>Create an Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                    <small>We'll send a verification code to this email</small>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+                <div class="form-group" id="verificationCodeGroup" style="display: none;">
+                    <label for="verificationCode">Verification Code</label>
+                    <input type="text" id="verificationCode" placeholder="Enter code sent to your email">
+                    <button type="button" class="btn btn-secondary" onclick="resendVerificationCode()" style="margin-top: 5px;">Resend Code</button>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;" id="signupButton">Sign Up</button>
+            </form>
+            <div class="auth-switch">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>CampusBookSwap</h3>
+                <p>Making textbooks affordable for students through peer-to-peer exchange.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Browse Books</a></li>
+                    <li><a href="#" id="footerPostLink">Post a Book</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: support@campusbookswap.in</li>
+                    <li>Phone: 7786543210</li>
+                    <li>Campus Location: Sit,Lavale</li>
+                </ul>
+            </div>
+        </div>
+       <div class="container copyright">
+            <p>&copy; 2025 CampusBookSwap. All rights reserved. | Made with ❤️ for Students</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', handleSignup);
+        
+        document.getElementById('postBookLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            checkAuthAndRedirect('post-book.html');
+        });
+
+        document.getElementById('footerPostLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            checkAuthAndRedirect('post-book.html');
+        });
+
+        updateAuthUI();
+    </script>
+</body>
+</html>
